@@ -1,15 +1,13 @@
-//your JS code here. If required.
 const panels = document.querySelectorAll('.panel');
 
-panels.forEach(panel => {
+panels.forEach((panel, index) => {
     panel.addEventListener('click', () => {
-        removeActiveClasses();
+        // Remove 'active' class from all panels
+        panels.forEach(p => p.classList.remove('active'));
+        // Add 'active' class to the clicked panel
         panel.classList.add('active');
     });
 });
 
-function removeActiveClasses() {
-    panels.forEach(panel => {
-        panel.classList.remove('active');
-    });
-}
+// Automatically expand the first panel
+panels[0].classList.add('active');
