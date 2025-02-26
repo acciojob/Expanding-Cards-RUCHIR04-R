@@ -1,51 +1,37 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-}
-
 .container {
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-image {
     position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 20px;
 }
 
 .main-image img {
     width: 100%;
-    border-radius: 20px;
     height: auto;
 }
 
-.caption {
+.text-overlay {
     position: absolute;
     bottom: 20px;
     left: 20px;
     color: white;
     font-size: 24px;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
-    border-radius: 10px;
 }
 
-.thumbnail-container {
+.thumbnail-images {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    margin-top: 10px;
 }
 
-.thumbnail-container img {
-    width: 100px;
+.thumbnail-images img {
+    width: 100px; /* Adjust size as needed */
     height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.thumbnail-container img:hover {
-    transform: scale(1.05);
+    margin: 0 5px;
+    border-radius: 5px; /* Optional styling */
 }
