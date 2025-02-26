@@ -1,13 +1,5 @@
-const panels = document.querySelectorAll('.panel');
-
-panels.forEach((panel, index) => {
-    panel.addEventListener('click', () => {
-        // Remove 'active' class from all panels
-        panels.forEach(p => p.classList.remove('active'));
-        // Add 'active' class to the clicked panel
-        panel.classList.add('active');
+document.querySelectorAll('.thumbnail-container img').forEach(image => {
+    image.addEventListener('click', () => {
+        alert(`You clicked on ${image.alt}`);
     });
 });
-
-// Automatically expand the first panel
-panels[0].classList.add('active');
